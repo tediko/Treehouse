@@ -1,0 +1,104 @@
+/* About section */
+.about {
+    background: var(--clr-about);
+}
+
+.about__wrapper {
+    display: flex;
+}
+
+.about__cog { 
+    position: relative;
+    flex: 2;
+    z-index: 1;
+}
+
+.about__cog::before { /* position cogwheel in section */
+    position: absolute;
+    content: '';
+    background: url(/assets/img/about-cog.png);
+    background-size: auto 420px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 50vw;
+    height: 100%;
+    right: -200px;
+}
+
+.about__content {
+    padding: 90px 40px 90px 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(/assets/img/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex: 4;
+    z-index: 2;
+}
+
+.about__text {
+    margin: 30px 0 25px 0;
+}
+
+.about__green { /* green span in .about__heading */
+    color: var(--clr-green);
+}
+
+.about__list {
+    margin-bottom: 50px;
+}
+
+.about__item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.about__item::before { /* create custom list-style */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: url(/assets/img/about-check.png);
+    width: 31px;
+    height: 31px;
+    border: 1px solid var(--clr-gray);
+    border-radius: 50%;
+    left: 0px;
+}
+
+.about__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* About media queries */
+@media (max-width: 768px) {
+    .about__cog {
+        display: none;
+    }
+
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 90px 40px;
+    }
+
+    .about__heading br {
+        display: none;
+    }
+
+    .about__text br {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__item {
+        padding-left: 35px;
+    }
+    .about__item::before {
+        border: none;
+    }
+}

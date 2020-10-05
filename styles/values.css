@@ -1,0 +1,137 @@
+/* Values section */
+.values {
+    background: var(--clr-values);
+}
+
+.values__wrapper {
+    padding: 90px 40px;
+    text-align: center;
+}
+
+.values__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0 0 0;
+}
+
+.values__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.values__box:not(:last-child) {
+    margin-right: 20px;
+}
+
+.values__box::after { /* horizontal line after box */
+    position: absolute;
+    content: '';
+    background: var(--clr-gray--dark);
+    width: 130%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    margin-top: -58px;
+}
+
+.values__box:last-of-type:after { /* disable pseudoelement for last box */
+    display: none;
+}
+
+.values__box .values__text {
+    margin-top: 10px;
+    max-width: 286px;
+}
+
+.values__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 84px;
+    margin: 0 0 25px 0;
+    z-index: 1;
+    transition: transform 250ms ease-in;
+}
+
+.values__icon::before { /* give icon a background so lines behave like responsive */
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background: var( --clr-gray--light);
+    border-radius: 50%;
+}
+
+.values__image {
+    z-index: 1;
+}
+
+
+/* Values media queries */
+@media (max-width: 1024px) {
+    .values__box {
+        flex-basis: 250px;
+    }
+
+    .values__box::after {
+        margin-top: -68px;
+    }
+}
+
+@media (max-width: 852px) {
+    .values__content {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .values__box {
+        flex-basis: 300px;
+    }
+
+    .values__box::after {
+        margin-top: -58px;
+    }
+
+    .values__box:nth-last-of-type(2)::after { /* disable horizontal line for second box */
+        display: none;
+    }
+
+    .values__box:last-of-type {
+        margin-top: 30px;
+    }
+
+    .values__box:not(:last-child) {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .values__content {
+        flex-direction: column;
+    }
+
+    .values__box {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .values__box:first-child::after { /* disable horizontal line for first box */
+        display: none;
+    }
+
+    .values__box:last-of-type {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .values__icon {
+        transform: scale(0.8);
+    }
+}
