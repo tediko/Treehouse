@@ -16,7 +16,7 @@
 .about__cog::before { /* position cogwheel in section */
     position: absolute;
     content: '';
-    background: url(/assets/img/about-cog.png);
+    background: url("../assets/img/about-cog.png");
     background-size: auto 420px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -27,7 +27,7 @@
 
 .about__content {
     padding: 90px 40px 90px 100px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(/assets/img/about-bg.png);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../assets/img/about-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    content: url(/assets/img/about-check.png);
+    content: url("../assets/img/about-check.png");
     width: 31px;
     height: 31px;
     border: 1px solid var(--clr-gray);

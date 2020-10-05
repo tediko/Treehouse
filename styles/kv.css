@@ -1,7 +1,7 @@
 /* kv section */
 .kv {
     margin-top: 114px; /* space for header */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(/assets/img/kv-bg.png);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../assets/img/kv-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }

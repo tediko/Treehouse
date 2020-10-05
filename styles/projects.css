@@ -7,7 +7,7 @@
 .projects::before {
     position: absolute;
     content: '';
-    background: url(/assets/img/projects-bg.png);
+    background: url("../assets/img/projects-bg.png");
     background-repeat: no-repeat;
     background-size: auto 520px;
     background-position: center right;
